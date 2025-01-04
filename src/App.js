@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './Navbar.js';
+import Home from './Home';
+
+const myvar=10;
+const myLink="https://www.instagram.com";
+
 
 function App() {
   return (
+  
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <div className="content">
+        Hello World
+
+      {myvar}
+
+      <h1 href={myLink}>My Link</h1>
+      <a href={myLink}>My Link of instagram</a>
+      
+      <Home/>
+      </div>
     </div>
   );
 }
 
 export default App;
+
