@@ -7,7 +7,7 @@
 // export default Home;
 
 
-// Experiment-11
+// Experiment-12
 import {  useState  } from "react"
 import BlogList from './BlogList'
 
@@ -19,7 +19,8 @@ const Home = () => {
     ]);
     return (
         <div className="home">
-            <BlogList blogs={blogs} title="All Blogs!" />
+            <BlogList blogs={blogs}  title={<span style={{ color: 'white' }}>All Blogs!</span>}  />
+            <BlogList  blogs={blogs.filter((blog) => blog.author === 'Raju')} title="Raju's blog" ></BlogList>
         </div>
     );
 }
