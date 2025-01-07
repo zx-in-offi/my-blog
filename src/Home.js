@@ -6,42 +6,32 @@
  
 // export default Home;
 
-import {   useState } from "react"
-const Home = () => {
-    const [name,setName] = useState('Zia');
-    const [age,setAge] = useState('18');
 
-    const handleClick  = () => {
-        console.log("Hello Everyone");
-        setAge('19')
-        setName('Ziya')
-    }
+//Experiment-10
+import {  useState  } from "react"
+
+const Home = () => {
+    const [blogs,setBlogs] = useState([
+        {title:"My Blog1", body:"Body of Blog1", author:"Ramu", id:1},
+        {title:"My Blog2", body:"Body of Blog2", author:"Raju", id:2},
+        {title:"My Blog3", body:"Body of Blog3", author:"Tomm", id:3},
+    ]);
     return (
         <div className="home">
-            <h2>Home Page</h2>
-            <p>Name: {name},Age: {age} </p>
-            <button onClick={handleClick} style={{ color: 'pink' ,  backgroundColor: 'white' }} >Click me</button>
+            {blogs.map((blog) => (
+                <div className="blog-preview" key={blog.id} >
+                    <h2> {blog.title} </h2>
+                    <p>Written by: {blog.author} </p>
+                </div>
+                
+            ))
+
+            }
         </div>
     );
 }
 export default Home;
 
 
-// Experiment-7
 
-// const Home = () =>  {
-//     const handleClick = (e) =>  {
-//         console.log("Hello ");
-//     }
-//     const handleClickAgain = (name) => {
-//         console.log("Hello "+name);
-//     }
-//     return (
-//     <div className="home">
-//     <h2> Home Page </h2>
-//     <button onClick={handleClick} >Click me</button>
-//     <button onClick={() => handleClickAgain('Ziya')} >Click me Again</button>
-//     </div>
-//     );
-//    }
-//    export default Home;
+
