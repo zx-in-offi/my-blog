@@ -2,7 +2,7 @@ import Navbar from './Navbar.js';
 import Home from './Home';
 
 const myvar=10;
-const myLink="https://www.instagram.com";
+// const myLink="https://www.instagram.com";
 
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
 
       {myvar}
 
-      <h1 href={myLink}>My Link</h1>
-      <a href={myLink}>My Link of instagram</a>
+      {/* <h1 href={myLink}>My Link</h1>
+      <a href={myLink}>My Link of instagram</a> */}
       
       <Home/>
       </div>
